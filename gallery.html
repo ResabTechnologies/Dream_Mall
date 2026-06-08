@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Dream Mall Payyoli</title>
+    <meta name="description" content="Explore photos of the premium interiors, storefronts, events, children's play area, food court, and facilities inside Dream Mall Payyoli, Kerala.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..900;1,9..40,400..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Top Contact and Social Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-contact">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@dreammallpayyoli.com">info@dreammallpayyoli.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+914962200100">+91 496 220 0100</a>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" data-router-link>
+                <div class="logo-text">DREAM<span>MALL</span></div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-router-link>Home</a>
+                <a href="about.html" class="nav-link" data-router-link>About</a>
+                <a href="stores.html" class="nav-link" data-router-link>Stores</a>
+                <a href="offers.html" class="nav-link" data-router-link>Offers</a>
+                <a href="events.html" class="nav-link" data-router-link>Events</a>
+                <a href="gallery.html" class="nav-link active" data-router-link>Gallery</a>
+                <a href="services.html" class="nav-link" data-router-link>Services</a>
+                <a href="careers.html" class="nav-link" data-router-link>Careers</a>
+                <!-- <a href="corporate.html" class="nav-link" data-router-link>Leasing</a> -->
+                <a href="contact.html" class="nav-link" data-router-link>Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-trigger" id="search-trigger-btn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Main Wrapper for router swaps -->
+    <main id="main-content">
+        <div id="gallery-premium-wrap">
+            <style>
+                #gallery-premium-wrap {
+                  --bg: #ffffff;
+                  --bg-2: #fafafa;
+                  --ink: #141416;
+                  --ink-soft: #2b2b30;
+                  --mute: #7d7d82;
+                  --line: #efefef;
+                  --ghost: #f4f4f6;
+                  --orange-1: #d9351f;
+                  --orange-2: #e85a2b;
+                  --orange-3: #f58b4e;
+                  --orange-4: #fdc68a;
+
+                  background: #ffffff;
+                  color: var(--ink);
+                  font-family: "DM Sans", system-ui, sans-serif;
+                  overflow-x: hidden;
+                  position: relative;
+                  min-height: 100vh;
+                  -webkit-font-smoothing: antialiased;
+                  padding-bottom: 60px;
+                }
+
+                #gallery-premium-wrap .grain {
+                  display: none;
+                }
+
+                #gallery-premium-wrap .hero {
+                  position: relative;
+                  min-height: 100vh;
+                  padding: 130px 32px 60px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  z-index: 5;
+                }
+
+                #gallery-premium-wrap .small-team {
+                  font-family: "DM Sans", sans-serif;
+                  font-weight: 700;
+                  font-size: clamp(40px, 6.4vw, 92px);
+                  letter-spacing: -0.035em;
+                  line-height: 1;
+                  color: var(--ink);
+                  text-align: center;
+                  margin-bottom: 0;
+                  z-index: 4;
+                  position: relative;
+                  border-bottom: none !important;
+                  padding-bottom: 0 !important;
+                }
+                #gallery-premium-wrap .small-team .word {
+                  display: inline-block;
+                  overflow: hidden;
+                  vertical-align: top;
+                }
+                #gallery-premium-wrap .small-team .word > span {
+                  display: inline-block;
+                  transform: translateY(105%);
+                }
+
+                #gallery-premium-wrap .big-results-wrap {
+                  position: relative;
+                  width: 100%;
+                  margin-top: -20px;
+                  display: flex;
+                  justify-content: center;
+                  z-index: 1;
+                }
+                #gallery-premium-wrap .big-results {
+                  font-family: "DM Sans", sans-serif;
+                  font-style: italic;
+                  font-weight: 800;
+                  font-size: clamp(70px, 14vw, 190px);
+                  letter-spacing: -0.045em;
+                  line-height: 0.85;
+                  color: var(--ghost);
+                  text-align: center;
+                  white-space: nowrap;
+                  user-select: none;
+                  z-index: 1;
+                  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+                }
+                #gallery-premium-wrap .big-results .letter {
+                  display: inline-block;
+                  transform-origin: bottom;
+                }
+
+                #gallery-premium-wrap .cards-row {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 50%;
+                  height: 320px;
+                  z-index: 3;
+                  pointer-events: none;
+                }
+                #gallery-premium-wrap .cards-row > * {
+                  pointer-events: auto;
+                }
+
+                #gallery-premium-wrap .card {
+                  position: absolute;
+                  border-radius: 18px;
+                  overflow: hidden;
+                  background: linear-gradient(
+                    180deg,
+                    var(--orange-1) 0%,
+                    var(--orange-2) 35%,
+                    var(--orange-3) 70%,
+                    var(--orange-4) 100%
+                  );
+                  box-shadow: 0 30px 50px -16px rgba(180, 50, 20, 0.4),
+                    0 14px 26px -8px rgba(140, 40, 10, 0.25),
+                    0 5px 10px -2px rgba(80, 20, 0, 0.15),
+                    inset 0 2px 0 rgba(255, 220, 180, 0.35);
+                  cursor: pointer;
+                  will-change: transform;
+                  backface-visibility: hidden;
+                  transform: translate3d(0, 0, 0);
+                  border: none !important;
+                  transition: box-shadow 0.5s cubic-bezier(0.6, 0, 0.2, 1);
+                }
+                #gallery-premium-wrap .card::before {
+                  content: "";
+                  position: absolute;
+                  inset: 0;
+                  background: linear-gradient(
+                    155deg,
+                    rgba(255, 255, 255, 0.25) 0%,
+                    transparent 30%,
+                    transparent 70%,
+                    rgba(100, 20, 0, 0.25) 100%
+                  );
+                  pointer-events: none;
+                  border-radius: inherit;
+                  z-index: 2;
+                }
+                #gallery-premium-wrap .card img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center top;
+                  display: block;
+                  will-change: transform;
+                }
+                #gallery-premium-wrap .card:hover {
+                  box-shadow: 0 44px 70px -20px rgba(180, 50, 20, 0.5),
+                    0 22px 38px -10px rgba(140, 40, 10, 0.3),
+                    0 8px 14px -3px rgba(80, 20, 0, 0.18),
+                    inset 0 2px 0 rgba(255, 220, 180, 0.4);
+                }
+
+                #gallery-premium-wrap .card-1 { width: 130px; height: 180px; left: 4%; top: 30px; z-index: 1; }
+                #gallery-premium-wrap .card-2 { width: 160px; height: 220px; left: 12%; top: 50px; z-index: 2; }
+                #gallery-premium-wrap .card-3 { width: 200px; height: 270px; left: 22%; top: 20px; z-index: 4; }
+                #gallery-premium-wrap .card-4 { width: 150px; height: 200px; left: 36%; top: 70px; z-index: 3; }
+                #gallery-premium-wrap .card-5 { width: 230px; height: 310px; left: 44%; top: 0px; z-index: 5; }
+                #gallery-premium-wrap .card-6 { width: 160px; height: 215px; left: 59%; top: 55px; z-index: 3; }
+                #gallery-premium-wrap .card-7 { width: 175px; height: 240px; left: 70%; top: 30px; z-index: 4; }
+                #gallery-premium-wrap .card-8 { width: 130px; height: 175px; left: 84%; top: 50px; z-index: 2; }
+
+                #gallery-premium-wrap .subline {
+                  margin-top: 180px;
+                  text-align: center;
+                  z-index: 4;
+                  position: relative;
+                }
+                #gallery-premium-wrap .subline .arrow-pill {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 10px;
+                  background: var(--ink);
+                  color: #fafaf7;
+                  border: none;
+                  padding: 12px 20px 12px 24px;
+                  border-radius: 999px;
+                  font-family: inherit;
+                  font-size: 14px;
+                  font-weight: 500;
+                  cursor: pointer;
+                  box-shadow: 0 14px 24px -8px rgba(0, 0, 0, 0.4),
+                    0 5px 10px -2px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
+                  transition: transform 0.4s cubic-bezier(0.6, 0, 0.2, 1);
+                }
+                #gallery-premium-wrap .subline .arrow-pill:hover {
+                  transform: translateY(-2px);
+                }
+                #gallery-premium-wrap .subline .arrow-pill .ar {
+                  width: 26px;
+                  height: 26px;
+                  border-radius: 50%;
+                  background: linear-gradient(180deg, var(--orange-1), var(--orange-3));
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #fff;
+                  transition: transform 0.4s cubic-bezier(0.6, 0, 0.2, 1);
+                }
+                #gallery-premium-wrap .subline .arrow-pill:hover .ar {
+                  transform: rotate(45deg);
+                }
+                #gallery-premium-wrap .subline-text {
+                  margin-top: 22px;
+                  font-size: 13px;
+                  color: var(--mute);
+                  letter-spacing: 0.06em;
+                }
+
+                #gallery-premium-wrap .team-section {
+                  padding: 140px 40px 80px;
+                  position: relative;
+                  z-index: 5;
+                }
+                #gallery-premium-wrap .team-head {
+                  max-width: 1280px;
+                  margin: 0 auto 60px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-end;
+                  gap: 40px;
+                  flex-wrap: wrap;
+                  text-align: left;
+                }
+                #gallery-premium-wrap .eyebrow {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 10px;
+                  font-size: 11px;
+                  letter-spacing: 0.28em;
+                  text-transform: uppercase;
+                  color: var(--mute);
+                  font-weight: 500;
+                  margin-bottom: 16px;
+                }
+                #gallery-premium-wrap .eyebrow::before {
+                  content: "";
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background: var(--orange-1);
+                  box-shadow: 0 0 0 3px rgba(217, 53, 31, 0.2);
+                }
+                #gallery-premium-wrap .team-head h2 {
+                  font-family: "DM Sans", sans-serif;
+                  font-weight: 700;
+                  font-size: clamp(34px, 4.4vw, 64px);
+                  line-height: 1.1;
+                  letter-spacing: -0.03em;
+                  max-width: 600px;
+                  color: var(--ink);
+                }
+                #gallery-premium-wrap .team-head h2 em {
+                  font-style: italic;
+                  font-weight: 800;
+                  background: linear-gradient(135deg, var(--orange-1), var(--orange-3));
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                }
+                #gallery-premium-wrap .team-head p {
+                  font-size: 15px;
+                  line-height: 1.55;
+                  color: var(--ink-soft);
+                  max-width: 320px;
+                }
+
+                #gallery-premium-wrap .team-grid {
+                  max-width: 1280px;
+                  margin: 0 auto;
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  gap: 24px;
+                }
+
+                #gallery-premium-wrap .t-card {
+                  aspect-ratio: 3 / 4;
+                  border-radius: 22px;
+                  overflow: hidden;
+                  background: linear-gradient(
+                    180deg,
+                    var(--orange-1) 0%,
+                    var(--orange-2) 35%,
+                    var(--orange-3) 70%,
+                    var(--orange-4) 100%
+                  );
+                  position: relative;
+                  box-shadow: 0 24px 40px -16px rgba(180, 50, 20, 0.35),
+                    0 10px 22px -6px rgba(140, 40, 10, 0.18),
+                    inset 0 2px 0 rgba(255, 220, 180, 0.3);
+                  cursor: pointer;
+                  will-change: transform;
+                  backface-visibility: hidden;
+                  transform: translate3d(0, 0, 0);
+                  border: none !important;
+                  transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1), box-shadow 0.5s;
+                }
+                #gallery-premium-wrap .t-card::before {
+                  content: "";
+                  position: absolute;
+                  inset: 0;
+                  background: linear-gradient(
+                    155deg,
+                    rgba(255, 255, 255, 0.22) 0%,
+                    transparent 30%,
+                    transparent 70%,
+                    rgba(100, 20, 0, 0.22) 100%
+                  );
+                  pointer-events: none;
+                  z-index: 2;
+                }
+                #gallery-premium-wrap .t-card:hover {
+                  transform: translateY(-10px) rotate(-1deg);
+                }
+                #gallery-premium-wrap .t-card img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center top;
+                }
+
+                #gallery-premium-wrap .t-meta {
+                  position: absolute;
+                  left: 14px;
+                  right: 14px;
+                  bottom: 14px;
+                  background: rgba(20, 10, 6, 0.75);
+                  backdrop-filter: blur(10px);
+                  -webkit-backdrop-filter: blur(10px);
+                  color: #fafaf7;
+                  padding: 12px 16px;
+                  border-radius: 14px;
+                  z-index: 3;
+                  transform: translateY(8px);
+                  opacity: 0;
+                  transition: opacity 0.4s, transform 0.4s cubic-bezier(0.6, 0, 0.2, 1);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  text-align: left;
+                }
+                #gallery-premium-wrap .t-card:hover .t-meta {
+                  transform: translateY(0);
+                  opacity: 1;
+                }
+                #gallery-premium-wrap .t-meta .nm {
+                  font-weight: 700;
+                  font-size: 14px;
+                }
+                #gallery-premium-wrap .t-meta .rl {
+                  font-size: 11px;
+                  color: rgba(255, 255, 255, 0.65);
+                  margin-top: 2px;
+                  letter-spacing: 0.03em;
+                }
+
+                #gallery-premium-wrap .stats {
+                  padding: 80px 40px 140px;
+                  position: relative;
+                  z-index: 5;
+                }
+                #gallery-premium-wrap .stats-inner {
+                  max-width: 1280px;
+                  margin: 0 auto;
+                  background: var(--ink);
+                  border-radius: 36px;
+                  padding: 80px 60px;
+                  color: #f4edde;
+                  display: grid;
+                  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                  gap: 40px;
+                  align-items: end;
+                  box-shadow: 0 40px 80px -30px rgba(20, 8, 0, 0.45),
+                    0 16px 32px -12px rgba(20, 8, 0, 0.25),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -3px 8px rgba(0, 0, 0, 0.5);
+                  position: relative;
+                  overflow: hidden;
+                  text-align: left;
+                }
+                #gallery-premium-wrap .stats-inner::before {
+                  content: "";
+                  position: absolute;
+                  width: 500px;
+                  height: 500px;
+                  border-radius: 50%;
+                  background: radial-gradient(circle, rgba(232, 90, 43, 0.35), transparent 65%);
+                  top: -200px;
+                  right: -100px;
+                  filter: blur(40px);
+                }
+                #gallery-premium-wrap .stats-inner::after {
+                  content: "";
+                  position: absolute;
+                  width: 350px;
+                  height: 350px;
+                  border-radius: 50%;
+                  background: radial-gradient(
+                    circle,
+                    rgba(253, 198, 138, 0.2),
+                    transparent 65%
+                  );
+                  bottom: -150px;
+                  left: 20%;
+                  filter: blur(30px);
+                }
+                #gallery-premium-wrap .stats h3 {
+                  font-family: "DM Sans", sans-serif;
+                  font-weight: 700;
+                  font-size: clamp(28px, 3vw, 42px);
+                  line-height: 1.1;
+                  letter-spacing: -0.03em;
+                  position: relative;
+                  z-index: 1;
+                  color: #f4edde;
+                }
+                #gallery-premium-wrap .stats h3 em {
+                  font-style: italic;
+                  font-weight: 800;
+                  background: linear-gradient(135deg, var(--orange-3), var(--orange-4));
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                }
+                #gallery-premium-wrap .stat-block {
+                  position: relative;
+                  z-index: 1;
+                }
+                #gallery-premium-wrap .stat-block .num {
+                  font-family: "DM Sans", sans-serif;
+                  font-weight: 700;
+                  font-size: clamp(44px, 4.5vw, 68px);
+                  line-height: 1;
+                  letter-spacing: -0.04em;
+                  display: flex;
+                  align-items: baseline;
+                  gap: 4px;
+                }
+                #gallery-premium-wrap .stat-block .num small {
+                  font-size: 0.42em;
+                  color: var(--mute);
+                  font-weight: 500;
+                }
+                #gallery-premium-wrap .stat-block .lbl {
+                  font-size: 12px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.16em;
+                  color: var(--mute);
+                  margin-top: 14px;
+                  padding-top: 14px;
+                  border-top: 1px solid rgba(255, 255, 255, 0.12);
+                }
+
+                @media (max-width: 1100px) {
+                  #gallery-premium-wrap .team-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                  }
+                  #gallery-premium-wrap .stats-inner {
+                    grid-template-columns: 1fr 1fr;
+                    padding: 50px 30px;
+                  }
+                }
+                @media (max-width: 750px) {
+                  #gallery-premium-wrap .hero {
+                    padding: 100px 16px 40px;
+                  }
+                  #gallery-premium-wrap .small-team {
+                    font-size: 10vw;
+                  }
+                  #gallery-premium-wrap .big-results {
+                    font-size: 16vw;
+                  }
+                  #gallery-premium-wrap .cards-row {
+                    height: 220px;
+                    top: 52%;
+                  }
+                  #gallery-premium-wrap .card-1 { width: 80px; height: 110px; left: 0%; top: 20px; }
+                  #gallery-premium-wrap .card-2 { width: 90px; height: 130px; left: 10%; top: 35px; }
+                  #gallery-premium-wrap .card-3 { width: 110px; height: 150px; left: 22%; top: 15px; }
+                  #gallery-premium-wrap .card-4 { width: 90px; height: 120px; left: 36%; top: 50px; }
+                  #gallery-premium-wrap .card-5 { width: 130px; height: 180px; left: 46%; top: 0; }
+                  #gallery-premium-wrap .card-6 { width: 95px; height: 130px; left: 62%; top: 40px; }
+                  #gallery-premium-wrap .card-7 { width: 100px; height: 140px; left: 74%; top: 20px; }
+                  #gallery-premium-wrap .card-8 { width: 80px; height: 110px; left: 87%; top: 35px; }
+                  #gallery-premium-wrap .subline {
+                    margin-top: 120px;
+                  }
+                  #gallery-premium-wrap .team-section {
+                    padding: 80px 20px 40px;
+                  }
+                  #gallery-premium-wrap .team-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+                  }
+                  #gallery-premium-wrap .stats {
+                    padding: 20px 20px 60px;
+                  }
+                  #gallery-premium-wrap .stats-inner {
+                    grid-template-columns: 1fr 1fr;
+                    padding: 40px 24px;
+                    gap: 24px;
+                  }
+                }
+            </style>
+
+            <div class="grain"></div>
+
+            <!-- HERO -->
+            <section class="hero">
+                <h1 class="small-team" id="smallTeam">
+                    <span class="word"><span>Grand</span></span>&nbsp;<span class="word"><span>spaces,</span></span>
+                </h1>
+
+                <div class="big-results-wrap">
+                    <div class="big-results" id="bigResults">
+                        <span class="letter">e</span><span class="letter">x</span><span class="letter">p</span><span class="letter">e</span><span class="letter">r</span><span class="letter">i</span><span class="letter">e</span><span class="letter">n</span><span class="letter">c</span><span class="letter">e</span><span class="letter">s</span>
+                    </div>
+                </div>
+
+                <!-- Card row of portraits -->
+                <div class="cards-row" id="cardsRow">
+                    <div class="card card-1" data-rot="-9" data-depth="14">
+                        <img src="assets/images/gallery_1.webp" alt="Atrium Central View" />
+                    </div>
+                    <div class="card card-2" data-rot="-5" data-depth="10">
+                        <img src="assets/images/gallery_2.webp" alt="Premium Store Front" />
+                    </div>
+                    <div class="card card-3" data-rot="-2" data-depth="8">
+                        <img src="assets/images/gallery_3.webp" alt="Brand Outlets Corridor" />
+                    </div>
+                    <div class="card card-4" data-rot="3" data-depth="12">
+                        <img src="assets/images/gallery_4.webp" alt="Hypermarket Aisle" />
+                    </div>
+                    <div class="card card-5" data-rot="0" data-depth="6">
+                        <img src="assets/images/gallery_5.webp" alt="Multiplex Cinema Lounge" />
+                    </div>
+                    <div class="card card-6" data-rot="4" data-depth="11">
+                        <img src="assets/images/gallery_6.webp" alt="Food Court Delights" />
+                    </div>
+                    <div class="card card-7" data-rot="7" data-depth="9">
+                        <img src="assets/images/gallery_7.webp" alt="Kids Soft Play Area" />
+                    </div>
+                    <div class="card card-8" data-rot="-4" data-depth="13">
+                        <img src="assets/images/gallery_8.webp" alt="Mall Main Frontage" />
+                    </div>
+                </div>
+
+                <div class="subline" id="subline">
+                    <button class="arrow-pill">
+                        Explore highlights
+                        <span class="ar">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="subline-text">20+ distinct zones. 100+ premium brands. Zero compromises.</div>
+                </div>
+            </section>
+
+            <!-- ============ SECTION 2: TEAM GRID ============ -->
+            <section class="team-section">
+                <div class="team-head">
+                    <div>
+                        <div class="eyebrow">The Mall · Photo Gallery</div>
+                        <h2>Exquisite spaces,<br />premium brands and <em>lively spots</em>.</h2>
+                    </div>
+                    <p>Take a virtual tour of Dream Mall Payyoli. Explore our design aesthetics, spacious corridors, food options, and recreational environments.</p>
+                </div>
+
+                <div class="team-grid" id="teamGrid">
+                    <div class="t-card">
+                        <img src="assets/images/gallery_9.webp" alt="Central Atrium" />
+                        <div class="t-meta">
+                            <div class="nm">Central Atrium</div>
+                            <div class="rl">Ground Floor Lobby</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_10.webp" alt="Fashion Avenue" />
+                        <div class="t-meta">
+                            <div class="nm">Fashion Avenue</div>
+                            <div class="rl">Ground Floor Corridor</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_11.webp" alt="Gold & Diamond Hub" />
+                        <div class="t-meta">
+                            <div class="nm">Gold & Diamond Hub</div>
+                            <div class="rl">Ground Floor West Wing</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_12.webp" alt="Electronics Arcade" />
+                        <div class="t-meta">
+                            <div class="nm">Electronics Arcade</div>
+                            <div class="rl">First Floor Central</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_13.webp" alt="Food Court Lounge" />
+                        <div class="t-meta">
+                            <div class="nm">Food Court Lounge</div>
+                            <div class="rl">Second Floor East Wing</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_14.webp" alt="Kids Fun & Games" />
+                        <div class="t-meta">
+                            <div class="nm">Kids Fun & Games</div>
+                            <div class="rl">Second Floor Central</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_15.webp" alt="Hypermarket Zone" />
+                        <div class="t-meta">
+                            <div class="nm">Hypermarket Zone</div>
+                            <div class="rl">Ground Floor North Wing</div>
+                        </div>
+                    </div>
+                    <div class="t-card">
+                        <img src="assets/images/gallery_16.webp" alt="Cinema Multiplex Entrance" />
+                        <div class="t-meta">
+                            <div class="nm">Cinema Multiplex Entrance</div>
+                            <div class="rl">Third Floor West Wing</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ SECTION 3: STATS ============ -->
+            <section class="stats">
+                <div class="stats-inner">
+                    <h3>Grand Spaces.<br />One <em>Dream Destination</em>.</h3>
+                    <div class="stat-block">
+                        <div class="num" data-count="62"><span>0</span></div>
+                        <div class="lbl">Active Brands</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="num" data-count="120"><span>0</span><small>k</small></div>
+                        <div class="lbl">Total Sq.Ft Area</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="num" data-count="9"><span>0</span><small>.4</small></div>
+                        <div class="lbl">Customer Rating</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="logo-text" style="margin-bottom: 20px;">DREAM<span>MALL</span></div>
+                <p>Dream Mall in Payyoli, Kerala, is a modern premium shopping mall, bringing together global brand outlets, local anchors, gold jewellery hubs, a multiplex cinema, kids soft-play zones, and a diverse food court.</p>
+                <div class="topbar-social" style="justify-content: flex-start; gap: 20px;">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-router-link>Home</a></li>
+                    <li><a href="about.html" data-router-link>About Mall</a></li>
+                    <li><a href="stores.html" data-router-link>Stores Directory</a></li>
+                    <li><a href="offers.html" data-router-link>Latest Offers</a></li>
+                    <li><a href="events.html" data-router-link>Upcoming Events</a></li>
+                    <li><a href="gallery.html" data-router-link>Photo Gallery</a></li>
+                    <li><a href="services.html" data-router-link>Mall Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Business</h4>
+                <ul class="footer-links">
+                    <li><a href="corporate.html" data-router-link>Leasing Opportunities</a></li>
+                    <li><a href="corporate.html" data-router-link>Business Partnerships</a></li>
+                    <li><a href="careers.html" data-router-link>Careers / Jobs</a></li>
+                    <li><a href="about.html#payyoli-history" data-router-link>Payyoli Heritage</a></li>
+                    <li><a href="contact.html" data-router-link>Enquiry Forms</a></li>
+                    <li><a href="location.html" data-router-link>Location Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Dream Mall, National Highway 66,<br>Payyoli, Kerala - 673522</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 496 220 0100<br>+91 496 220 0101</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@dreammallpayyoli.com<br>leasing@dreammallpayyoli.com</span>
+                    </li>
+                </ul>
+                <div class="footer-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.3703901968875!2d75.6425982!3d11.5252876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68fac87c10b4f%3A0xad0e77d01869e578!2sPayyoli%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>Dream Mall Payyoli</span>. All Rights Reserved. Designed for Premium Experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Global Search Modal Overlay -->
+    <div class="search-modal" id="global-search-modal">
+        <div class="search-modal-container">
+            <button class="search-modal-close" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-modal-input" placeholder="Type store name or category..." id="search-input-field">
+                <button class="search-modal-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-results-preview" id="search-results-preview-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/page-logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stores Directory - Dream Mall Payyoli</title>
+    <meta name="description" content="Browse the directory of brand stores, hypermarket, food court counters, and services inside Dream Mall Payyoli, Kerala. Filter by category or floor.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Contact and Social Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-contact">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@dreammallpayyoli.com">info@dreammallpayyoli.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+914962200100">+91 496 220 0100</a>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" data-router-link>
+                <div class="logo-text">DREAM<span>MALL</span></div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-router-link>Home</a>
+                <a href="about.html" class="nav-link" data-router-link>About</a>
+                <a href="stores.html" class="nav-link active" data-router-link>Stores</a>
+                <a href="offers.html" class="nav-link" data-router-link>Offers</a>
+                <a href="events.html" class="nav-link" data-router-link>Events</a>
+                <a href="gallery.html" class="nav-link" data-router-link>Gallery</a>
+                <a href="services.html" class="nav-link" data-router-link>Services</a>
+                <a href="careers.html" class="nav-link" data-router-link>Careers</a>
+                <!-- <a href="corporate.html" class="nav-link" data-router-link>Leasing</a> -->
+                <a href="contact.html" class="nav-link" data-router-link>Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-trigger" id="search-trigger-btn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Main Wrapper for router swaps -->
+    <main id="main-content">
+        <!-- Global Banner Section -->
+        <section class="page-banner" style="background-image: url('assets/images/banner_master.png');">
+            <div class="banner-content">
+                <h1 class="banner-title">Store <span>Directory</span></h1>
+                <div class="breadcrumbs">
+                    <a href="index.html" data-router-link>Home</a>
+                    <span class="breadcrumbs-separator">/</span>
+                    <span class="breadcrumbs-current">Stores Directory</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="container directory-layout reveal">
+                
+                <!-- Sidebar Filters -->
+                <aside class="directory-filters">
+                    <div class="filter-section">
+                        <h4>Shop Categories</h4>
+                        <div class="filter-list">
+                            <button class="filter-btn category-filter-btn active" data-category="All">
+                                <span class="filter-btn-label"><i class="fa-solid fa-border-all"></i> All Categories</span>
+                                <span class="filter-count">10</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Fashion">
+                                <span class="filter-btn-label"><i class="fa-solid fa-shirt"></i> Fashion</span>
+                                <span class="filter-count">2</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Footwear">
+                                <span class="filter-btn-label"><i class="fa-solid fa-shoe-prints"></i> Footwear</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Electronics">
+                                <span class="filter-btn-label"><i class="fa-solid fa-laptop"></i> Electronics</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Jewellery">
+                                <span class="filter-btn-label"><i class="fa-solid fa-gem"></i> Jewellery</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Mobile Stores">
+                                <span class="filter-btn-label"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Stores</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Grocery">
+                                <span class="filter-btn-label"><i class="fa-solid fa-basket-shopping"></i> Grocery</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Food Court">
+                                <span class="filter-btn-label"><i class="fa-solid fa-utensils"></i> Food Court</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Kids">
+                                <span class="filter-btn-label"><i class="fa-solid fa-gamepad"></i> Kids</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                            <button class="filter-btn category-filter-btn" data-category="Beauty">
+                                <span class="filter-btn-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Beauty</span>
+                                <span class="filter-count">1</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Mall Floors</h4>
+                        <div class="filter-list">
+                            <button class="filter-btn floor-filter-btn active" data-floor="All">
+                                <span class="filter-btn-label"><i class="fa-solid fa-layer-group"></i> All Floors</span>
+                            </button>
+                            <button class="filter-btn floor-filter-btn" data-floor="Ground">
+                                <span class="filter-btn-label"><i class="fa-solid fa-arrow-down-long"></i> Ground Floor</span>
+                            </button>
+                            <button class="filter-btn floor-filter-btn" data-floor="First">
+                                <span class="filter-btn-label"><i class="fa-solid fa-1"></i> First Floor</span>
+                            </button>
+                            <button class="filter-btn floor-filter-btn" data-floor="Second">
+                                <span class="filter-btn-label"><i class="fa-solid fa-2"></i> Second Floor</span>
+                            </button>
+                            <button class="filter-btn floor-filter-btn" data-floor="Third">
+                                <span class="filter-btn-label"><i class="fa-solid fa-3"></i> Third Floor</span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Directory Grid Content -->
+                <div class="directory-content">
+                    <header class="directory-controls">
+                        <div class="dir-search-wrapper">
+                            <input type="text" id="directory-search-input" class="dir-search-input" placeholder="Search by name, tags...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        
+                        <div class="dir-sort-views">
+                            <div style="font-size:0.9rem; color:var(--color-text-muted);">
+                                Showing <span id="directory-results-count" style="font-weight:600; color:var(--color-primary);">10</span> results
+                            </div>
+                            
+                            <select id="directory-sort-select" class="form-select" style="padding: 8px 12px; font-size: 0.85rem; width:150px;">
+                                <option value="a-z">Sort A - Z</option>
+                                <option value="z-a">Sort Z - A</option>
+                            </select>
+
+                            <div class="dir-view-toggle">
+                                <button class="view-btn active" id="view-grid-btn" aria-label="Grid View"><i class="fa-solid fa-grip"></i></button>
+                                <button class="view-btn" id="view-list-btn" aria-label="List View"><i class="fa-solid fa-list"></i></button>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Store cards wrapper populated dynamically -->
+                    <div class="stores-directory-grid" id="directory-stores-container"></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="logo-text" style="margin-bottom: 20px;">DREAM<span>MALL</span></div>
+                <p>Dream Mall in Payyoli, Kerala, is a modern premium shopping mall, bringing together global brand outlets, local anchors, gold jewellery hubs, a multiplex cinema, kids soft-play zones, and a diverse food court.</p>
+                <div class="topbar-social" style="justify-content: flex-start; gap: 20px;">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-router-link>Home</a></li>
+                    <li><a href="about.html" data-router-link>About Mall</a></li>
+                    <li><a href="stores.html" data-router-link>Stores Directory</a></li>
+                    <li><a href="offers.html" data-router-link>Latest Offers</a></li>
+                    <li><a href="events.html" data-router-link>Upcoming Events</a></li>
+                    <li><a href="gallery.html" data-router-link>Photo Gallery</a></li>
+                    <li><a href="services.html" data-router-link>Mall Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Business</h4>
+                <ul class="footer-links">
+                    <li><a href="corporate.html" data-router-link>Leasing Opportunities</a></li>
+                    <li><a href="corporate.html" data-router-link>Business Partnerships</a></li>
+                    <li><a href="careers.html" data-router-link>Careers / Jobs</a></li>
+                    <li><a href="about.html#payyoli-history" data-router-link>Payyoli Heritage</a></li>
+                    <li><a href="contact.html" data-router-link>Enquiry Forms</a></li>
+                    <li><a href="location.html" data-router-link>Location Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Dream Mall, National Highway 66,<br>Payyoli, Kerala - 673522</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 496 220 0100<br>+91 496 220 0101</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@dreammallpayyoli.com<br>leasing@dreammallpayyoli.com</span>
+                    </li>
+                </ul>
+                <div class="footer-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.3703901968875!2d75.6425982!3d11.5252876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68fac87c10b4f%3A0xad0e77d01869e578!2sPayyoli%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>Dream Mall Payyoli</span>. All Rights Reserved. Designed for Premium Experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Global Search Modal Overlay -->
+    <div class="search-modal" id="global-search-modal">
+        <div class="search-modal-container">
+            <button class="search-modal-close" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-modal-input" placeholder="Type store name or category..." id="search-input-field">
+                <button class="search-modal-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-results-preview" id="search-results-preview-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/page-logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Community - Dream Mall Payyoli</title>
+    <meta name="description" content="Discover regional workshops, children's educational programs, awareness campaigns, and community drives hosted by Dream Mall Payyoli, Kerala.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Contact and Social Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-contact">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@dreammallpayyoli.com">info@dreammallpayyoli.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+914962200100">+91 496 220 0100</a>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" data-router-link>
+                <div class="logo-text">DREAM<span>MALL</span></div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-router-link>Home</a>
+                <a href="about.html" class="nav-link" data-router-link>About</a>
+                <a href="stores.html" class="nav-link" data-router-link>Stores</a>
+                <a href="offers.html" class="nav-link" data-router-link>Offers</a>
+                <a href="events.html" class="nav-link" data-router-link>Events</a>
+                <a href="gallery.html" class="nav-link" data-router-link>Gallery</a>
+                <a href="services.html" class="nav-link" data-router-link>Services</a>
+                <a href="careers.html" class="nav-link" data-router-link>Careers</a>
+                <!-- <a href="corporate.html" class="nav-link" data-router-link>Leasing</a> -->
+                <a href="contact.html" class="nav-link" data-router-link>Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-trigger" id="search-trigger-btn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Main Wrapper for router swaps -->
+    <main id="main-content">
+        <!-- Global Banner Section -->
+        <section class="page-banner" style="background-image: url('assets/images/banner_master.png');">
+            <div class="banner-content">
+                <h1 class="banner-title">Community <span>Hub</span></h1>
+                <div class="breadcrumbs">
+                    <a href="index.html" data-router-link>Home</a>
+                    <span class="breadcrumbs-separator">/</span>
+                    <span class="breadcrumbs-current">Learning & Community</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Learning & <span>Social Action</span></h2>
+                    <p>At Dream Mall, we believe in giving back. We regularly host workshops, safety campaigns, and eco-initiatives inside Payyoli.</p>
+                </div>
+                
+                <div class="learning-programs-grid">
+                    <!-- Program 1 -->
+                    <article class="store-card card">
+                        <div class="card-img">
+                            <img src="assets/images/gallery_15.webp" alt="Kids sculpting class" loading="lazy">
+                            <span class="card-tag" style="background-color:#10b981; color:#fff;">Workshop</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Kids Clay Sculpting Class</h3>
+                            <p class="card-text" style="height:auto; margin-bottom:15px;">A weekly creative workshop for children aged 5-12, teaching hand-coordination, basic clay modeling, and color logic.</p>
+                            <div class="card-footer" style="padding-top:15px; border-top:1px solid var(--color-accent-silver); display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-size:0.85rem; font-weight:600;"><i class="fa-solid fa-calendar" style="color:var(--color-accent-gold);"></i> Every Saturday</span>
+                                <a href="events.html#register-anchor" class="btn btn-gold btn-sm" data-router-link>Join Free</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Program 2 -->
+                    <article class="store-card card">
+                        <div class="card-img">
+                            <img src="assets/images/gallery_1.webp" alt="Green recycling campaign" loading="lazy">
+                            <span class="card-tag" style="background-color:#0284c7; color:#fff;">Campaign</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Green Payyoli Recycling Drive</h3>
+                            <p class="card-text" style="height:auto; margin-bottom:15px;">Partnering with regional municipal councils to educate citizens on dry-wet segregation and reducing single-use plastics.</p>
+                            <div class="card-footer" style="padding-top:15px; border-top:1px solid var(--color-accent-silver); display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-size:0.85rem; font-weight:600;"><i class="fa-solid fa-calendar" style="color:var(--color-accent-gold);"></i> June 5th World Env Day</span>
+                                <a href="contact.html" class="btn btn-gold btn-sm" data-router-link>Participate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Program 3 -->
+                    <article class="store-card card">
+                        <div class="card-img">
+                            <img src="assets/images/gallery_2.webp" alt="Traffic safety program" loading="lazy">
+                            <span class="card-tag" style="background-color:#f59e0b; color:#fff;">Awareness</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Road Safety Awareness Class</h3>
+                            <p class="card-text" style="height:auto; margin-bottom:15px;">Collaborative workshops headed by Kerala Traffic Police departments, demonstrating highway signs, helmet values, and safe driving protocols.</p>
+                            <div class="card-footer" style="padding-top:15px; border-top:1px solid var(--color-accent-silver); display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-size:0.85rem; font-weight:600;"><i class="fa-solid fa-calendar" style="color:var(--color-accent-gold);"></i> June 20th</span>
+                                <a href="contact.html" class="btn btn-gold btn-sm" data-router-link>Register</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="logo-text" style="margin-bottom: 20px;">DREAM<span>MALL</span></div>
+                <p>Dream Mall in Payyoli, Kerala, is a modern premium shopping mall, bringing together global brand outlets, local anchors, gold jewellery hubs, a multiplex cinema, kids soft-play zones, and a diverse food court.</p>
+                <div class="topbar-social" style="justify-content: flex-start; gap: 20px;">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-router-link>Home</a></li>
+                    <li><a href="about.html" data-router-link>About Mall</a></li>
+                    <li><a href="stores.html" data-router-link>Stores Directory</a></li>
+                    <li><a href="offers.html" data-router-link>Latest Offers</a></li>
+                    <li><a href="events.html" data-router-link>Upcoming Events</a></li>
+                    <li><a href="gallery.html" data-router-link>Photo Gallery</a></li>
+                    <li><a href="services.html" data-router-link>Mall Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Business</h4>
+                <ul class="footer-links">
+                    <li><a href="corporate.html" data-router-link>Leasing Opportunities</a></li>
+                    <li><a href="corporate.html" data-router-link>Business Partnerships</a></li>
+                    <li><a href="careers.html" data-router-link>Careers / Jobs</a></li>
+                    <li><a href="about.html#payyoli-history" data-router-link>Payyoli Heritage</a></li>
+                    <li><a href="contact.html" data-router-link>Enquiry Forms</a></li>
+                    <li><a href="location.html" data-router-link>Location Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Dream Mall, National Highway 66,<br>Payyoli, Kerala - 673522</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 496 220 0100<br>+91 496 220 0101</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@dreammallpayyoli.com<br>leasing@dreammallpayyoli.com</span>
+                    </li>
+                </ul>
+                <div class="footer-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.3703901968875!2d75.6425982!3d11.5252876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68fac87c10b4f%3A0xad0e77d01869e578!2sPayyoli%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>Dream Mall Payyoli</span>. All Rights Reserved. Designed for Premium Experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Global Search Modal Overlay -->
+    <div class="search-modal" id="global-search-modal">
+        <div class="search-modal-container">
+            <button class="search-modal-close" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-modal-input" placeholder="Type store name or category..." id="search-input-field">
+                <button class="search-modal-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-results-preview" id="search-results-preview-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/page-logic.js"></script>
+</body>
+</html>

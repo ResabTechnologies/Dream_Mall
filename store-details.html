@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Details - Dream Mall Payyoli</title>
+    <meta name="description" content="View specific store details, phone numbers, opening hours, gallery, and layout location maps inside Dream Mall Payyoli, Kerala.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Contact and Social Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-contact">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@dreammallpayyoli.com">info@dreammallpayyoli.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+914962200100">+91 496 220 0100</a>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" data-router-link>
+                <div class="logo-text">DREAM<span>MALL</span></div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-router-link>Home</a>
+                <a href="about.html" class="nav-link" data-router-link>About</a>
+                <a href="stores.html" class="nav-link active" data-router-link>Stores</a>
+                <a href="offers.html" class="nav-link" data-router-link>Offers</a>
+                <a href="events.html" class="nav-link" data-router-link>Events</a>
+                <a href="gallery.html" class="nav-link" data-router-link>Gallery</a>
+                <a href="services.html" class="nav-link" data-router-link>Services</a>
+                <a href="careers.html" class="nav-link" data-router-link>Careers</a>
+                <!-- <a href="corporate.html" class="nav-link" data-router-link>Leasing</a> -->
+                <a href="contact.html" class="nav-link" data-router-link>Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-trigger" id="search-trigger-btn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Main Wrapper for router swaps -->
+    <main id="main-content">
+        <!-- Global Banner Section -->
+        <section class="page-banner" style="background-image: url('assets/images/banner_master.png');">
+            <div class="banner-content">
+                <h1 class="banner-title"><span id="detail-store-name">Store Details</span></h1>
+                <div class="breadcrumbs">
+                    <a href="index.html" data-router-link>Home</a>
+                    <span class="breadcrumbs-separator">/</span>
+                    <a href="stores.html" data-router-link>Stores Directory</a>
+                    <span class="breadcrumbs-separator">/</span>
+                    <span class="breadcrumbs-current" id="detail-breadcrumb-name">Store details</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="container store-details-grid reveal">
+                
+                <!-- Gallery Carousel (Left Panel) -->
+                <div class="store-gallery-detail">
+                    <div class="store-large-img">
+                        <img id="detail-large-img" src="assets/images/banner_master.png" alt="Featured Store Photo">
+                    </div>
+                    <div class="store-thumbnails" id="detail-thumbnails">
+                        <!-- Loaded dynamically -->
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h2 style="margin-bottom:15px; font-size:1.6rem;">About the Store</h2>
+                        <p id="detail-store-desc" style="font-size:1.05rem; line-height:1.7;">Loading store details...</p>
+                        
+                        <div style="margin-top: 30px; display:flex; gap:15px;">
+                            <a href="stores.html" class="btn btn-silver" data-router-link><i class="fa-solid fa-arrow-left"></i> Back to Directory</a>
+                            <a href="#" id="detail-store-website" target="_blank" rel="noopener" class="btn btn-gold" style="display:none;">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Sidebar (Right Panel) -->
+                <aside class="store-info-sidebar">
+                    <div class="store-sidebar-header">
+                        <h3 class="store-title" id="detail-store-title-sidebar">Store Info</h3>
+                        <span class="store-cat" id="detail-store-cat">Category</span>
+                    </div>
+                    <div class="store-sidebar-body">
+                        <div class="store-meta-list">
+                            <div class="store-meta-item">
+                                <i class="fa-solid fa-map-pin"></i>
+                                <div class="store-meta-content">
+                                    <div class="store-meta-label">Mall Floor</div>
+                                    <div class="store-meta-value" id="detail-store-floor">Ground Floor</div>
+                                </div>
+                            </div>
+                            <div class="store-meta-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div class="store-meta-content">
+                                    <div class="store-meta-label">Phone Details</div>
+                                    <div class="store-meta-value" id="detail-store-phone">+91 496 220 0100</div>
+                                </div>
+                            </div>
+                            <div class="store-meta-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <div class="store-meta-content">
+                                    <div class="store-meta-label">Opening Hours</div>
+                                    <div class="store-meta-value" id="detail-store-hours">10:00 AM - 10:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inside Mall Floor Plan locator graphic -->
+                        <div class="mall-locator-map">
+                            <div style="font-weight:600; color:var(--color-text-dark); margin-bottom:5px;">Locator Inside Mall</div>
+                            <div style="font-size:0.85rem; color:var(--color-text-muted);" id="detail-store-location">Zone A, Atrium</div>
+                            
+                            <div class="mall-map-floorplan">
+                                <span>FLOOR LAYOUT PLAN</span>
+                                <!-- Floor map relative dot marker -->
+                                <div class="mall-map-marker" id="detail-floor-marker" style="top:50%; left:50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="logo-text" style="margin-bottom: 20px;">DREAM<span>MALL</span></div>
+                <p>Dream Mall in Payyoli, Kerala, is a modern premium shopping mall, bringing together global brand outlets, local anchors, gold jewellery hubs, a multiplex cinema, kids soft-play zones, and a diverse food court.</p>
+                <div class="topbar-social" style="justify-content: flex-start; gap: 20px;">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-router-link>Home</a></li>
+                    <li><a href="about.html" data-router-link>About Mall</a></li>
+                    <li><a href="stores.html" data-router-link>Stores Directory</a></li>
+                    <li><a href="offers.html" data-router-link>Latest Offers</a></li>
+                    <li><a href="events.html" data-router-link>Upcoming Events</a></li>
+                    <li><a href="gallery.html" data-router-link>Photo Gallery</a></li>
+                    <li><a href="services.html" data-router-link>Mall Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Business</h4>
+                <ul class="footer-links">
+                    <li><a href="corporate.html" data-router-link>Leasing Opportunities</a></li>
+                    <li><a href="corporate.html" data-router-link>Business Partnerships</a></li>
+                    <li><a href="careers.html" data-router-link>Careers / Jobs</a></li>
+                    <li><a href="about.html#payyoli-history" data-router-link>Payyoli Heritage</a></li>
+                    <li><a href="contact.html" data-router-link>Enquiry Forms</a></li>
+                    <li><a href="location.html" data-router-link>Location Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Dream Mall, National Highway 66,<br>Payyoli, Kerala - 673522</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 496 220 0100<br>+91 496 220 0101</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@dreammallpayyoli.com<br>leasing@dreammallpayyoli.com</span>
+                    </li>
+                </ul>
+                <div class="footer-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.3703901968875!2d75.6425982!3d11.5252876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68fac87c10b4f%3A0xad0e77d01869e578!2sPayyoli%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>Dream Mall Payyoli</span>. All Rights Reserved. Designed for Premium Experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Global Search Modal Overlay -->
+    <div class="search-modal" id="global-search-modal">
+        <div class="search-modal-container">
+            <button class="search-modal-close" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-modal-input" placeholder="Type store name or category..." id="search-input-field">
+                <button class="search-modal-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-results-preview" id="search-results-preview-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/page-logic.js"></script>
+</body>
+</html>

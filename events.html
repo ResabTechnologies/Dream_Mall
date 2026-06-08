@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Festivals - Dream Mall Payyoli</title>
+    <meta name="description" content="Check out the upcoming events calendar, children's programs, product launches, and festival celebrations at Dream Mall Payyoli, Kerala.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Contact and Social Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-contact">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@dreammallpayyoli.com">info@dreammallpayyoli.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+914962200100">+91 496 220 0100</a>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" data-router-link>
+                <div class="logo-text">DREAM<span>MALL</span></div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-router-link>Home</a>
+                <a href="about.html" class="nav-link" data-router-link>About</a>
+                <a href="stores.html" class="nav-link" data-router-link>Stores</a>
+                <a href="offers.html" class="nav-link" data-router-link>Offers</a>
+                <a href="events.html" class="nav-link active" data-router-link>Events</a>
+                <a href="gallery.html" class="nav-link" data-router-link>Gallery</a>
+                <a href="services.html" class="nav-link" data-router-link>Services</a>
+                <a href="careers.html" class="nav-link" data-router-link>Careers</a>
+                <!-- <a href="corporate.html" class="nav-link" data-router-link>Leasing</a> -->
+                <a href="contact.html" class="nav-link" data-router-link>Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-trigger" id="search-trigger-btn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Main Wrapper for router swaps -->
+    <main id="main-content">
+        <!-- Global Banner Section -->
+        <section class="page-banner" style="background-image: url('assets/images/banner_master.png');">
+            <div class="banner-content">
+                <h1 class="banner-title">Mall <span>Events</span></h1>
+                <div class="breadcrumbs">
+                    <a href="index.html" data-router-link>Home</a>
+                    <span class="breadcrumbs-separator">/</span>
+                    <span class="breadcrumbs-current">Events & Activities</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar & Listings Section -->
+        <section class="section-padding bg-white">
+            <div class="container events-page-grid reveal">
+                
+                <!-- Interactive Calendar Widget -->
+                <div class="calendar-widget">
+                    <div class="calendar-header">
+                        <h3>Event Schedule: June 2026</h3>
+                        <div style="font-size:0.9rem; color:var(--color-accent-gold); font-weight:600;"><i class="fa-solid fa-circle-info"></i> Click on highlighted dates to view event quick details</div>
+                    </div>
+                    <div class="calendar-days">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Populated by page-logic.js -->
+                    </div>
+                    <!-- Calendar Legend -->
+                    <div class="calendar-legend" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; padding: 20px; background-color:var(--color-bg-light); border-top: 1px solid var(--color-accent-silver); font-size:0.85rem; font-weight:600;">
+                        <span style="display:flex; align-items:center; gap:8px;"><span style="display:inline-block; width:12px; height:12px; border-radius:50%; background-color:#ef4444;"></span> Sale Event (Red)</span>
+                        <span style="display:flex; align-items:center; gap:8px;"><span style="display:inline-block; width:12px; height:12px; border-radius:50%; background-color:#3b82f6;"></span> Entertainment (Blue)</span>
+                        <span style="display:flex; align-items:center; gap:8px;"><span style="display:inline-block; width:12px; height:12px; border-radius:50%; background-color:#10b981;"></span> Kids Event (Green)</span>
+                        <span style="display:flex; align-items:center; gap:8px;"><span style="display:inline-block; width:12px; height:12px; border-radius:50%; background-color:#f97316;"></span> Food Festival (Orange)</span>
+                    </div>
+                </div>
+
+                <!-- Event Details Grid -->
+                <div style="margin-top: 50px;">
+                    <div class="section-header">
+                        <h2>Upcoming <span>Programs</span></h2>
+                        <p>Join us and participate in our exciting upcoming schedules. Bring your friends and family!</p>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:30px;">
+                        <!-- Program 1 -->
+                        <article class="event-card card">
+                            <div class="card-img">
+                                <img src="assets/images/event_1.webp" alt="Summer Fashion Fiesta Show" loading="lazy">
+                                <div class="event-date">
+                                    <span>05</span>Jun
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="event-meta">
+                                    <span><i class="fa-solid fa-clock"></i> 04:00 PM - 08:00 PM</span>
+                                    <span><i class="fa-solid fa-map-pin"></i> Central Atrium</span>
+                                </div>
+                                <h3 class="card-title">Summer Fashion Fiesta</h3>
+                                <p class="card-text">Witness top trends with our live summer collections fashion walk featuring regional styling workshops, styling consultations, and makeup tutorials by Lakme professionals.</p>
+                                <a href="#register-anchor" class="btn btn-gold btn-sm" style="align-self:flex-start;">Register for Event</a>
+                            </div>
+                        </article>
+
+                        <!-- Program 2 -->
+                        <article class="event-card card">
+                            <div class="card-img">
+                                <img src="assets/images/event_2.webp" alt="Tech Launch Expo Show" loading="lazy">
+                                <div class="event-date">
+                                    <span>14</span>Jun
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="event-meta">
+                                    <span><i class="fa-solid fa-clock"></i> 11:00 AM - 09:00 PM</span>
+                                    <span><i class="fa-solid fa-map-pin"></i> First Floor Lobby</span>
+                                </div>
+                                <h3 class="card-title">Tech Launch Expo 2026</h3>
+                                <p class="card-text">Explore the future of smart mobility, photography, and acoustics. Exclusive hands-on demonstrations of premium mirrorless cameras, consoles, and smart screens.</p>
+                                <a href="#register-anchor" class="btn btn-gold btn-sm" style="align-self:flex-start;">Register for Event</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Registration On-page Form -->
+                <div class="card" id="register-anchor" style="max-width: 800px; margin: 60px auto 0; padding: 40px; background-color:var(--color-bg-light);">
+                    <h3 style="font-size:1.5rem; text-align:center; margin-bottom:10px;">Get Your Event Pass</h3>
+                    <p style="text-align:center; color:var(--color-text-muted); margin-bottom:30px; font-size:0.95rem;">Fill out your details to secure free entry passes and reminder notifications for upcoming mall activities.</p>
+                    
+                    <form id="event-register-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="reg-name" class="form-label">Full Name *</label>
+                                <input type="text" id="reg-name" class="form-input" required placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-email" class="form-label">Email Address *</label>
+                                <input type="email" id="reg-email" class="form-input" required placeholder="name@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="reg-phone" class="form-input" required placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-event" class="form-label">Select Event *</label>
+                                <select id="reg-event" class="form-select" required>
+                                    <option value="">Choose program</option>
+                                    <option value="fashion">Summer Fashion Fiesta (June 5)</option>
+                                    <option value="tech">Tech Launch Expo (June 14)</option>
+                                    <option value="carnival">Kids Carnival (June 21)</option>
+                                    <option value="food">Food Fusion Festival (June 28)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="text-align:center; margin-top:20px;">
+                            <button type="submit" class="btn btn-gold">Generate Entry Pass</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <div class="logo-text" style="margin-bottom: 20px;">DREAM<span>MALL</span></div>
+                <p>Dream Mall in Payyoli, Kerala, is a modern premium shopping mall, bringing together global brand outlets, local anchors, gold jewellery hubs, a multiplex cinema, kids soft-play zones, and a diverse food court.</p>
+                <div class="topbar-social" style="justify-content: flex-start; gap: 20px;">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-router-link>Home</a></li>
+                    <li><a href="about.html" data-router-link>About Mall</a></li>
+                    <li><a href="stores.html" data-router-link>Stores Directory</a></li>
+                    <li><a href="offers.html" data-router-link>Latest Offers</a></li>
+                    <li><a href="events.html" data-router-link>Upcoming Events</a></li>
+                    <li><a href="gallery.html" data-router-link>Photo Gallery</a></li>
+                    <li><a href="services.html" data-router-link>Mall Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Business</h4>
+                <ul class="footer-links">
+                    <li><a href="corporate.html" data-router-link>Leasing Opportunities</a></li>
+                    <li><a href="corporate.html" data-router-link>Business Partnerships</a></li>
+                    <li><a href="careers.html" data-router-link>Careers / Jobs</a></li>
+                    <li><a href="about.html#payyoli-history" data-router-link>Payyoli Heritage</a></li>
+                    <li><a href="contact.html" data-router-link>Enquiry Forms</a></li>
+                    <li><a href="location.html" data-router-link>Location Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Dream Mall, National Highway 66,<br>Payyoli, Kerala - 673522</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 496 220 0100<br>+91 496 220 0101</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@dreammallpayyoli.com<br>leasing@dreammallpayyoli.com</span>
+                    </li>
+                </ul>
+                <div class="footer-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.3703901968875!2d75.6425982!3d11.5252876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68fac87c10b4f%3A0xad0e77d01869e578!2sPayyoli%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>Dream Mall Payyoli</span>. All Rights Reserved. Designed for Premium Experiences.</p>
+        </div>
+    </footer>
+
+    <!-- Global Search Modal Overlay -->
+    <div class="search-modal" id="global-search-modal">
+        <div class="search-modal-container">
+            <button class="search-modal-close" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-modal-input" placeholder="Type store name or category..." id="search-input-field">
+                <button class="search-modal-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-results-preview" id="search-results-preview-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/page-logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Dream Mall Payyoli</title>
+    <meta name="description"
+        content="Explore job vacancies, corporate positions, and retail careers at Dream Mall Payyoli, Kerala. Apply online using our careers form.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Contact and Social Bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-contact">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@dreammallpayyoli.com">info@dreammallpayyoli.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+914962200100">+91 496 220 0100</a>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" data-router-link>
+                <div class="logo-text">DREAM<span>MALL</span></div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-router-link>Home</a>
+                <a href="about.html" class="nav-link" data-router-link>About</a>
+                <a href="stores.html" class="nav-link" data-router-link>Stores</a>
+                <a href="offers.html" class="nav-link" data-router-link>Offers</a>
+                <a href="events.html" class="nav-link" data-router-link>Events</a>
+                <a href="gallery.html" class="nav-link" data-router-link>Gallery</a>
+                <a href="services.html" class="nav-link" data-router-link>Services</a>
+                <a href="careers.html" class="nav-link active" data-router-link>Careers</a>
+                <!-- <a href="corporate.html" class="nav-link" data-router-link>Leasing</a> -->
+                <a href="contact.html" class="nav-link" data-router-link>Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-trigger" id="search-trigger-btn" aria-label="Open Search"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Main Wrapper for router swaps -->
+    <main id="main-content">
+        <!-- Shared Main Wrapper for router swaps -->
+        <main id="main-content">
+            <div id="careers-premium-wrap">
+                <style>
+                    /* Scoped Careers Styles */
+                    #careers-premium-wrap {
+                        background: #060d1a;
+                        color: #e2e8f0;
+                        padding-bottom: 20px;
+                    }
+
+                    .careers-hero {
+                        position: relative;
+                        padding: 100px 0 80px;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        min-height: 400px;
+                        overflow: hidden;
+                    }
+
+                    .careers-hero::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(180deg, rgba(10, 25, 47, 0.65) 0%, rgba(6, 13, 26, 1) 100%);
+                        z-index: 1;
+                    }
+
+                    .careers-hero-content {
+                        position: relative;
+                        z-index: 2;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                    }
+
+                    .careers-hero-title {
+                        font-family: var(--font-headings);
+                        font-size: 3.5rem;
+                        font-weight: 800;
+                        color: #ffffff;
+                        line-height: 1.1;
+                        margin-bottom: 20px;
+                        letter-spacing: -1px;
+                    }
+
+                    .careers-hero-title span {
+                        background: linear-gradient(135deg, #ffffff 0%, var(--color-accent-gold) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                    .careers-hero-desc {
+                        font-size: 1.2rem;
+                        color: #cbd5e1;
+                        margin-bottom: 25px;
+                        line-height: 1.6;
+                    }
+
+                    .careers-hero-breadcrumbs {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 0.9rem;
+                        color: #94a3b8;
+                    }
+
+                    .careers-hero-breadcrumbs a {
+                        color: var(--color-accent-gold);
+                        transition: var(--transition-fast);
+                    }
+
+                    .careers-hero-breadcrumbs a:hover {
+                        color: #ffffff;
+                    }
+
+                    /* Perks Section */
+                    .perks-section {
+                        padding: 60px 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                    }
+
+                    .perks-header {
+                        text-align: center;
+                        max-width: 700px;
+                        margin: 0 auto 40px;
+                    }
+
+                    .perks-header h2 {
+                        font-size: 2.2rem;
+                        color: #ffffff;
+                        margin-bottom: 15px;
+                    }
+
+                    .perks-header h2 span {
+                        color: var(--color-accent-gold);
+                    }
+
+                    .perks-header p {
+                        color: #94a3b8;
+                        font-size: 1rem;
+                    }
+
+                    .perks-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                        gap: 30px;
+                    }
+
+                    .perk-card {
+                        background: rgba(23, 42, 69, 0.3);
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        border-radius: var(--radius-lg);
+                        padding: 30px;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        backdrop-filter: blur(10px);
+                    }
+
+                    .perk-card:hover {
+                        transform: translateY(-5px);
+                        border-color: var(--color-accent-gold);
+                        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+                        background: rgba(23, 42, 69, 0.5);
+                    }
+
+                    .perk-icon-wrap {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 12px;
+                        background: rgba(212, 175, 55, 0.1);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                        color: var(--color-accent-gold);
+                        font-size: 1.4rem;
+                        transition: var(--transition-fast);
+                    }
+
+                    .perk-card:hover .perk-icon-wrap {
+                        background: var(--color-accent-gold);
+                        color: var(--color-primary-dark);
+                    }
+
+                    .perk-title {
+                        font-size: 1.15rem;
+                        color: #ffffff;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                    }
+
+                    .perk-desc {
+                        font-size: 0.9rem;
+                        color: #94a3b8;
+                        line-height: 1.6;
+                    }
+
+                    /* Careers Layout Section */
+                    .careers-content-section {
+                        padding: 80px 0 50px;
+                    }
+
+                    .vacancies-section {
+                        margin-bottom: 60px;
+                    }
+
+                    .vacancies-header-title {
+                        font-size: 2.5rem;
+                        color: #ffffff;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+
+                    .vacancies-header-desc {
+                        color: #94a3b8;
+                        margin-bottom: 45px;
+                        font-size: 1.05rem;
+                        text-align: center;
+                        max-width: 700px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    /* Vacancies Accordions - Alternative Design */
+                    .vacancies-list {
+                        display: grid;
+                        gap: 20px;
+                        max-width: 900px;
+                        margin: 0 auto;
+                    }
+
+                    .vacancy-item {
+                        background: rgba(30, 41, 59, 0.4);
+                        border: 1px solid rgba(255, 255, 255, 0.08);
+                        border-left: 4px solid var(--color-accent-gold);
+                        border-radius: 12px;
+                        overflow: hidden;
+                        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .vacancy-item:hover {
+                        border-left-width: 6px;
+                        transform: translateX(5px);
+                        border-color: var(--color-accent-gold) var(--color-accent-gold) var(--color-accent-gold) var(--color-accent-gold);
+                        background: rgba(30, 41, 59, 0.6);
+                        box-shadow: 0 8px 30px rgba(212, 175, 55, 0.08);
+                    }
+
+                    .vacancy-item.open {
+                        border-left-width: 6px;
+                        border-color: var(--color-accent-gold);
+                        background: rgba(15, 23, 42, 0.6);
+                        box-shadow: 0 12px 40px rgba(212, 175, 55, 0.12);
+                    }
+
+                    .vacancy-header {
+                        padding: 25px 30px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+                        user-select: none;
+                        transition: var(--transition-fast);
+                    }
+
+                    .vacancy-header:hover {
+                        background-color: rgba(255, 255, 255, 0.02) !important;
+                    }
+
+                    .vacancy-title-group h3 {
+                        font-size: 1.3rem;
+                        color: #ffffff;
+                        margin-bottom: 8px;
+                        font-weight: 700;
+                        letter-spacing: -0.3px;
+                    }
+
+                    .vacancy-meta {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                    }
+
+                    .vacancy-meta-badge {
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        color: #cbd5e1;
+                        background: rgba(255, 255, 255, 0.05);
+                        padding: 4px 10px;
+                        border-radius: var(--radius-sm);
+                        border: 1px solid rgba(255, 255, 255, 0.04);
+                    }
+
+                    .vacancy-item.open .vacancy-meta-badge {
+                        background: rgba(212, 175, 55, 0.1);
+                        color: var(--color-accent-gold);
+                        border-color: rgba(212, 175, 55, 0.2);
+                    }
+
+                    .vacancy-trigger-icon {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.05);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.9rem;
+                        color: #94a3b8;
+                        transition: all 0.3s ease;
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                    }
+
+                    .vacancy-item.open .vacancy-trigger-icon {
+                        transform: rotate(180deg);
+                        background: var(--color-accent-gold);
+                        color: var(--color-primary-dark);
+                        border-color: var(--color-accent-gold);
+                        box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+                    }
+
+                    .vacancy-details {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
+                    .vacancy-item.open .vacancy-details {
+                        max-height: 600px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.06);
+                    }
+
+                    .vacancy-desc {
+                        padding: 30px;
+                        color: #cbd5e1;
+                    }
+
+                    .vacancy-desc h4 {
+                        font-size: 1.05rem;
+                        color: #ffffff;
+                        margin-bottom: 12px;
+                        margin-top: 20px;
+                        font-weight: 600;
+                        letter-spacing: 0.3px;
+                    }
+
+                    .vacancy-desc h4:first-of-type {
+                        margin-top: 0;
+                    }
+
+                    .vacancy-desc p {
+                        font-size: 0.95rem;
+                        line-height: 1.6;
+                        color: #cbd5e1;
+                    }
+
+                    .vacancy-desc ul {
+                        list-style: none;
+                        padding: 0;
+                    }
+
+                    .vacancy-desc li {
+                        font-size: 0.95rem;
+                        color: #cbd5e1;
+                        margin-bottom: 8px;
+                        position: relative;
+                        padding-left: 20px;
+                        line-height: 1.5;
+                    }
+
+                    .vacancy-desc li::before {
+                        content: "\f00c";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        color: var(--color-accent-gold);
+                        position: absolute;
+                        left: 0;
+                        font-size: 0.8rem;
+                        top: 4px;
+                    }
+
+                    /* Careers Application Form - Alternative Design */
+                    .apply-info-section {
+                        padding: 80px 0;
+                        border-top: 1px solid rgba(255, 255, 255, 0.05);
+                        background: rgba(10, 25, 47, 0.2);
+                    }
+
+                    .apply-info-header {
+                        text-align: center;
+                        max-width: 800px;
+                        margin: 0 auto 50px;
+                    }
+
+                    .apply-info-header h2 {
+                        font-size: 2.5rem;
+                        color: #ffffff;
+                        margin-bottom: 15px;
+                    }
+
+                    .apply-info-header h2 span {
+                        color: var(--color-accent-gold);
+                    }
+
+                    .apply-info-header p {
+                        color: #cbd5e1;
+                        font-size: 1.05rem;
+                        line-height: 1.7;
+                    }
+
+                    .apply-checklist-grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 30px;
+                        max-width: 1100px;
+                        margin: 0 auto;
+                    }
+
+                    .apply-checklist-card {
+                        background: rgba(30, 41, 59, 0.3);
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        border-radius: var(--radius-lg);
+                        padding: 35px 30px;
+                        text-align: center;
+                        transition: all 0.3s ease;
+                        backdrop-filter: blur(10px);
+                    }
+
+                    .apply-checklist-card:hover {
+                        transform: translateY(-5px);
+                        border-color: var(--color-accent-gold);
+                        background: rgba(30, 41, 59, 0.5);
+                        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.06);
+                    }
+
+                    .checklist-card-icon {
+                        font-size: 2.2rem;
+                        color: var(--color-accent-gold);
+                        margin-bottom: 20px;
+                    }
+
+                    .checklist-card-title {
+                        font-size: 1.2rem;
+                        color: #ffffff;
+                        margin-bottom: 12px;
+                        font-weight: 600;
+                    }
+
+                    .checklist-card-desc {
+                        font-size: 0.92rem;
+                        color: #94a3b8;
+                        line-height: 1.6;
+                    }
+
+                    /* Apply Form Section */
+                    .apply-form-section {
+                        padding: 80px 0 100px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.05);
+                        background: #060d1a;
+                    }
+
+                    .careers-form-container {
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+
+                    .careers-form-wrapper {
+                        background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+                        border: 1px solid rgba(212, 175, 55, 0.2);
+                        border-radius: 16px;
+                        padding: 50px 45px;
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+                        backdrop-filter: blur(25px);
+                    }
+
+                    .careers-form-wrapper h3 {
+                        font-size: 2rem;
+                        color: #ffffff;
+                        margin-bottom: 10px;
+                        font-weight: 700;
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                    }
+
+                    .careers-form-wrapper p {
+                        font-size: 1rem;
+                        color: #cbd5e1;
+                        margin-bottom: 35px;
+                        line-height: 1.5;
+                        text-align: center;
+                    }
+
+                    .careers-form-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px 24px;
+                        margin-bottom: 24px;
+                    }
+
+                    .careers-form-grid-full {
+                        grid-column: span 2;
+                    }
+
+                    .careers-form-group {
+                        margin-bottom: 0;
+                    }
+
+                    .careers-form-label {
+                        display: block;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        color: #cbd5e1;
+                        margin-bottom: 8px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.8px;
+                    }
+
+                    .careers-form-input {
+                        width: 100%;
+                        background: rgba(15, 23, 42, 0.6);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 8px;
+                        padding: 13px 18px;
+                        color: #ffffff;
+                        font-size: 0.95rem;
+                        transition: all 0.3s ease;
+                    }
+
+                    .careers-form-input:focus {
+                        border-color: var(--color-accent-gold);
+                        background: rgba(15, 23, 42, 0.8);
+                        box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+                    }
+
+                    .careers-form-input::placeholder {
+                        color: #64748b;
+                    }
+
+                    .file-upload-wrapper-premium {
+                        position: relative;
+                        border: 2px dashed rgba(212, 175, 55, 0.25);
+                        border-radius: 8px;
+                        padding: 22px 15px;
+                        text-align: center;
+                        background: rgba(15, 23, 42, 0.4);
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+
+                    .file-upload-wrapper-premium:hover {
+                        border-color: var(--color-accent-gold);
+                        background: rgba(212, 175, 55, 0.05);
+                    }
+
+                    .file-upload-input-premium {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+
+                    .file-upload-text-premium {
+                        font-size: 0.85rem;
+                        color: #cbd5e1;
+                        pointer-events: none;
+                        display: block;
+                    }
+
+                    .file-upload-text-premium i {
+                        font-size: 1.8rem;
+                        color: var(--color-accent-gold);
+                        margin-bottom: 8px;
+                        display: block;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .file-upload-wrapper-premium:hover .file-upload-text-premium i {
+                        transform: translateY(-3px);
+                    }
+
+                    .careers-submit-btn {
+                        width: 100%;
+                        background: linear-gradient(135deg, var(--color-accent-gold) 0%, #b89324 100%);
+                        color: var(--color-primary-dark);
+                        font-size: 1rem;
+                        font-weight: 700;
+                        padding: 14px 20px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+                        margin-top: 10px;
+                    }
+
+                    .careers-submit-btn:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+                        background: linear-gradient(135deg, #ffffff 0%, var(--color-accent-gold) 100%);
+                    }
+
+                    .careers-submit-btn:active {
+                        transform: translateY(0);
+                    }
+
+                    @media (max-width: 900px) {
+                        .apply-checklist-grid {
+                            grid-template-columns: 1fr;
+                            gap: 20px;
+                        }
+
+                        .careers-form-grid {
+                            grid-template-columns: 1fr;
+                            gap: 20px;
+                        }
+
+                        .careers-form-grid-full {
+                            grid-column: span 1;
+                        }
+
+                        .careers-form-wrapper {
+                            padding: 35px 25px;
+                        }
+
+                        .careers-hero-title {
+                            font-size: 2.6rem;
+                        }
+                    }
+                </style>
+
+                <!-- Careers Hero Section -->
+                <section class="careers-hero" style="background-image: url('assets/images/careers_bg.webp');">
+                    <div class="careers-hero-content">
+                        <h1 class="careers-hero-title">Work With <span>Us</span></h1>
+                        <p class="careers-hero-desc">Discover inspiring retail careers, operations roles, and management
+                            positions inside Northern Malabar's landmark shopping center.</p>
+                        <div class="careers-hero-breadcrumbs">
+                            <a href="index.html" data-router-link>Home</a>
+                            <span>/</span>
+                            <span>Careers</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Perks Section -->
+                <section class="perks-section">
+                    <div class="container">
+                        <div class="perks-header">
+                            <h2>Why Join <span>Dream Mall?</span></h2>
+                            <p>We provide a premium, collaborative environment where talent flourishes, offering
+                                exceptional benefits and continuous skill development.</p>
+                        </div>
+                        <div class="perks-grid">
+                            <div class="perk-card">
+                                <div class="perk-icon-wrap"><i class="fa-solid fa-wallet"></i></div>
+                                <h3 class="perk-title">Competitive Salary</h3>
+                                <p class="perk-desc">Industry-standard compensation packages, performance-based
+                                    incentives, and yearly bonuses.</p>
+                            </div>
+                            <div class="perk-card">
+                                <div class="perk-icon-wrap"><i class="fa-solid fa-notes-medical"></i></div>
+                                <h3 class="perk-title">Healthcare Options</h3>
+                                <p class="perk-desc">Comprehensive medical coverage, health checks, and standard family
+                                    support benefits.</p>
+                            </div>
+                            <div class="perk-card">
+                                <div class="perk-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+                                <h3 class="perk-title">Career Acceleration</h3>
+                                <p class="perk-desc">Mentorship programs, internal promotions, and specialized training
+                                    tracks for retail professionals.</p>
+                            </div>
+                            <div class="perk-card">
+                                <div class="perk-icon-wrap"><i class="fa-solid fa-users"></i></div>
+                                <h3 class="perk-title">Vibrant Work Culture</h3>
+                                <p class="perk-desc">A diverse, friendly, and progressive team workspace celebrating
+                                    local heritage and innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Content Section (Openings) -->
+                <section class="careers-content-section">
+                    <div class="container">
+                        <div class="vacancies-section">
+                            <h2 class="vacancies-header-title">Current Openings</h2>
+                            <p class="vacancies-header-desc">Click on any vacancy position below to view the detailed
+                                job objectives, core skills, and specific qualifications needed to apply.</p>
+
+                            <div class="vacancies-list">
+                                <!-- Vacancy 1 -->
+                                <div class="vacancy-item">
+                                    <div class="vacancy-header">
+                                        <div class="vacancy-title-group">
+                                            <h3>Guest Relations Executive</h3>
+                                            <div class="vacancy-meta">
+                                                <span class="vacancy-meta-badge">Customer Relations</span>
+                                                <span class="vacancy-meta-badge">1 - 3 Years Exp</span>
+                                                <span class="vacancy-meta-badge">Full-Time</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-down vacancy-trigger-icon"></i>
+                                    </div>
+                                    <div class="vacancy-details">
+                                        <div class="vacancy-desc">
+                                            <h4>Job Objective:</h4>
+                                            <p>Act as the primary customer experience ambassador at our central help
+                                                desks, welcoming guests, managing enquiries, and resolving local
+                                                complaints.</p>
+                                            <h4>Requirements:</h4>
+                                            <ul>
+                                                <li>Excellent communication skills in Malayalam and English
+                                                    (Hindi/Arabic is a plus).</li>
+                                                <li>Friendly customer-first attitude with presentable aesthetics.</li>
+                                                <li>Proficient with basic spreadsheet management and call transfers.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Vacancy 2 -->
+                                <div class="vacancy-item">
+                                    <div class="vacancy-header">
+                                        <div class="vacancy-title-group">
+                                            <h3>Assistant Store Manager (Anchor Store)</h3>
+                                            <div class="vacancy-meta">
+                                                <span class="vacancy-meta-badge">Retail Sales</span>
+                                                <span class="vacancy-meta-badge">3 - 5 Years Exp</span>
+                                                <span class="vacancy-meta-badge">Full-Time</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-down vacancy-trigger-icon"></i>
+                                    </div>
+                                    <div class="vacancy-details">
+                                        <div class="vacancy-desc">
+                                            <h4>Job Objective:</h4>
+                                            <p>Assist in daily retail store operations, manage staff duties, track
+                                                inventory sales levels, and coordinate customer support teams to
+                                                maximize retail benchmarks.</p>
+                                            <h4>Requirements:</h4>
+                                            <ul>
+                                                <li>Prior experience managing retail sales teams or apparel outlets.
+                                                </li>
+                                                <li>Strong leadership, training, and schedule coordination capabilities.
+                                                </li>
+                                                <li>Graduate degree in Business Administration, Marketing, or relevant
+                                                    field.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Vacancy 3 -->
+                                <div class="vacancy-item">
+                                    <div class="vacancy-header">
+                                        <div class="vacancy-title-group">
+                                            <h3>IT Systems & CCTV Support Engineer</h3>
+                                            <div class="vacancy-meta">
+                                                <span class="vacancy-meta-badge">IT Support</span>
+                                                <span class="vacancy-meta-badge">2 - 4 Years Exp</span>
+                                                <span class="vacancy-meta-badge">Full-Time</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-down vacancy-trigger-icon"></i>
+                                    </div>
+                                    <div class="vacancy-details">
+                                        <div class="vacancy-desc">
+                                            <h4>Job Objective:</h4>
+                                            <p>Maintain the mall's high-speed WiFi connections, digital interactive
+                                                store locators, ticketing systems, and central CCTV server
+                                                configurations.</p>
+                                            <h4>Requirements:</h4>
+                                            <ul>
+                                                <li>Bachelor's degree or Diploma in Computer Science/IT or Electronic
+                                                    Engineering.</li>
+                                                <li>Hands-on experience with surveillance networks and local area
+                                                    configurations.</li>
+                                                <li>Rapid problem-solving for network downtime.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Begin Your Career Journey Section -->
+                <section class="apply-info-section">
+                    <div class="container">
+                        <div class="apply-info-header">
+                            <span class="apply-tag"
+                                style="color:var(--color-accent-gold); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1.5px; margin-bottom:12px; display:inline-block;">Join
+                                Our Elite Team</span>
+                            <h2>Begin Your Career <span>Journey</span></h2>
+                            <p>At Dream Mall Payyoli, we offer more than just jobs—we offer long-term career growth. We
+                                welcome passionate individuals who wish to work in a dynamic, high-energy environment
+                                celebrating hospitality, service excellence, and commercial innovation.</p>
+                        </div>
+
+                        <div class="apply-checklist-grid">
+                            <div class="apply-checklist-card">
+                                <div class="checklist-card-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <h3 class="checklist-card-title">Standard Verification</h3>
+                                <p class="checklist-card-desc">Every profile goes through systematic review by our human
+                                    resources team within 5 working days.</p>
+                            </div>
+                            <div class="apply-checklist-card">
+                                <div class="checklist-card-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <h3 class="checklist-card-title">Direct Notification</h3>
+                                <p class="checklist-card-desc">Shortlisted candidates are contacted directly via phone
+                                    or email for scheduled technical evaluations.</p>
+                            </div>
+                            <div class="apply-checklist-card">
+                                <div class="checklist-card-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <h3 class="checklist-card-title">Talent Database</h3>
+                                <p class="checklist-card-desc">If your chosen position isn't active, your CV is securely
+                                    cataloged in our general talent pipeline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Apply Online Section -->
+                <section class="apply-form-section">
+                    <div class="container">
+                        <div class="careers-form-container">
+                            <aside class="careers-form-wrapper">
+                                <h3>Apply Online</h3>
+                                <p>Submit your profile details along with your updated resume to register for vacancy
+                                    evaluations.</p>
+
+                                <form id="career-apply-form">
+                                    <div class="careers-form-grid">
+                                        <div class="careers-form-group">
+                                            <label for="apply-name" class="careers-form-label">Full Name *</label>
+                                            <input type="text" id="apply-name" class="careers-form-input" required
+                                                placeholder="John Doe">
+                                        </div>
+                                        <div class="careers-form-group">
+                                            <label for="apply-email" class="careers-form-label">Email Address *</label>
+                                            <input type="email" id="apply-email" class="careers-form-input" required
+                                                placeholder="john@domain.com">
+                                        </div>
+                                        <div class="careers-form-group">
+                                            <label for="apply-phone" class="careers-form-label">Phone Number *</label>
+                                            <input type="tel" id="apply-phone" class="careers-form-input" required
+                                                placeholder="+91 XXXXX XXXXX">
+                                        </div>
+                                        <div class="careers-form-group">
+                                            <label for="apply-role" class="careers-form-label">Target Vacancy *</label>
+                                            <select id="apply-role" class="careers-form-input"
+                                                style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill=%22%23cbd5e1%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M7 10l5 5 5-5z%22/></svg>'); background-repeat: no-repeat; background-position: right 12px center;"
+                                                required>
+                                                <option value="" style="background-color: var(--color-primary-light);">
+                                                    Choose Position</option>
+                                                <option value="guest"
+                                                    style="background-color: var(--color-primary-light);">Guest
+                                                    Relations Executive</option>
+                                                <option value="manager"
+                                                    style="background-color: var(--color-primary-light);">Assistant
+                                                    Store Manager</option>
+                                                <option value="it"
+                                                    style="background-color: var(--color-primary-light);">IT Support
+                                                    Engineer</option>
+                                                <option value="general"
+                                                    style="background-color: var(--color-primary-light);">Other /
+                                                    General Operations</option>
+                                            </select>
+                                        </div>
+                                        <div class="careers-form-group careers-form-grid-full">
+                                            <label for="apply-message" class="careers-form-label">Cover Note / Message
+                                                *</label>
+                                            <textarea id="apply-message" class="careers-form-input"
+                                                style="min-height: 100px; resize: vertical;" required
+                                                placeholder="Explain why you're a good fit for this role..."></textarea>
+                                        </div>
+                                        <div class="careers-form-group careers-form-grid-full">
+                                            <span class="careers-form-label">Resume Attachment (PDF/DOCX, Max 5MB)
+                                                *</span>
+                                            <div class="file-upload-wrapper-premium">
+                                                <input type="file" id="career-resume" class="file-upload-input-premium"
+                                                    accept=".pdf,.doc,.docx" required>
+                                                <span class="file-upload-text-premium" id="file-upload-label">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i> Choose PDF/DOCX Resume
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="careers-submit-btn">Submit Profile</button>
+                                </form>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo-text" style="margin-bottom: 20px;">DREAM<span>MALL</span></div>
+                    <p>Dream Mall in Payyoli, Kerala, is a modern premium shopping mall, bringing together global brand
+                        outlets, local anchors, gold jewellery hubs, a multiplex cinema, kids soft-play zones, and a
+                        diverse food court.</p>
+                    <div class="topbar-social" style="justify-content: flex-start; gap: 20px;">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-router-link>Home</a></li>
+                        <li><a href="about.html" data-router-link>About Mall</a></li>
+                        <li><a href="stores.html" data-router-link>Stores Directory</a></li>
+                        <li><a href="offers.html" data-router-link>Latest Offers</a></li>
+                        <li><a href="events.html" data-router-link>Upcoming Events</a></li>
+                        <li><a href="gallery.html" data-router-link>Photo Gallery</a></li>
+                        <li><a href="services.html" data-router-link>Mall Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Business</h4>
+                    <ul class="footer-links">
+                        <li><a href="corporate.html" data-router-link>Leasing Opportunities</a></li>
+                        <li><a href="corporate.html" data-router-link>Business Partnerships</a></li>
+                        <li><a href="careers.html" data-router-link>Careers / Jobs</a></li>
+                        <li><a href="about.html#payyoli-history" data-router-link>Payyoli Heritage</a></li>
+                        <li><a href="contact.html" data-router-link>Enquiry Forms</a></li>
+                        <li><a href="location.html" data-router-link>Location Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Details</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Dream Mall, National Highway 66,<br>Payyoli, Kerala - 673522</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 496 220 0100<br>+91 496 220 0101</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@dreammallpayyoli.com<br>leasing@dreammallpayyoli.com</span>
+                        </li>
+                    </ul>
+                    <div class="footer-map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.3703901968875!2d75.6425982!3d11.5252876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68fac87c10b4f%3A0xad0e77d01869e578!2sPayyoli%2C%20Kerala!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Dream Mall Payyoli</span>. All Rights Reserved. Designed for Premium Experiences.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Global Search Modal Overlay -->
+        <div class="search-modal" id="global-search-modal">
+            <div class="search-modal-container">
+                <button class="search-modal-close" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-modal-input" placeholder="Type store name or category..."
+                        id="search-input-field">
+                    <button class="search-modal-btn" aria-label="Search"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="search-results-preview" id="search-results-preview-container"></div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script src="js/page-logic.js"></script>
+</body>
+
+</html>
