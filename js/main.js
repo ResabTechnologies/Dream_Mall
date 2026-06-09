@@ -171,7 +171,13 @@ function initScrollReveal() {
     }, observerOptions);
 
     document.querySelectorAll(".reveal").forEach(el => {
-        observer.observe(el);
+        const rect = el.getBoundingClientRect();
+        // If the element is already visible or above the viewport, reveal it immediately
+        if (rect.top < window.innerHeight) {
+            el.classList.add("reveal-visible");
+        } else {
+            observer.observe(el);
+        }
     });
 }
 

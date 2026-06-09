@@ -457,7 +457,8 @@
     .nav-menu {
         position: fixed;
         top: var(--header-height);
-        left: -100%;
+        left: 0;
+        transform: translateX(-100%);
         width: 100%;
         height: calc(100vh - var(--header-height));
         background-color: var(--color-primary-light);
@@ -466,14 +467,14 @@
         justify-content: flex-start;
         padding-top: 50px;
         gap: 25px;
-        transition: var(--transition-normal);
+        transition: transform var(--transition-normal);
         z-index: 999;
         box-shadow: inset 0 8px 15px rgba(0,0,0,0.1);
         overflow-y: auto;
     }
     
     .nav-menu.active {
-        left: 0;
+        transform: translateX(0);
     }
     
     .nav-link {
