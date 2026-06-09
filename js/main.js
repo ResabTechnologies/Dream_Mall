@@ -24,10 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
     triggerPageSpecificLogic();
 });
 
+let globalComponentsInitialized = false;
+
 /* =========================================
    1. GLOBAL SYSTEM COMPONENTS
    ========================================= */
 function initGlobalComponents() {
+    if (globalComponentsInitialized) return;
+    globalComponentsInitialized = true;
+
     // Header Scroll behavior
     const header = document.querySelector(".header");
     window.addEventListener("scroll", () => {
@@ -255,7 +260,6 @@ function loadPageContent(url, pushState = true) {
                 }
 
                 // Re-initialize scripts, lightbox, map hooks, etc.
-                initGlobalComponents();
                 initScrollReveal();
                 triggerPageSpecificLogic();
             }, 200);
